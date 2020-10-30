@@ -16,14 +16,13 @@ romNum = str(input("Römische nummer eingeben: "))
 def translate(romNum):
     sum = 0
     prev_num = 0
-    for char in romNum:                     # loop over every character in the roman number
-        if char in numdict:                 # check if character is in the dictionnary
-            if numdict[char] > prev_num:    # if the found roman number is larger than the previous number, substract it (case: IX)
-                sum -= prev_num             # substract from total sum
-            else:
-                sum += prev_num             # else: add to the previous number (case: XI)
-        prev_num = numdict[char]            # update the previous number to the current number for the next iteration on the string
-    sum += prev_num                         # add the previous number to the total sum
+    for char in romNum:                 # loop over every character in the roman number
+        if numdict[char] > prev_num:    # if the found roman number is larger than the previous number, substract it (case: IX)
+            sum -= prev_num             # subtract from total sum
+        else:
+            sum += prev_num             # else: add to the previous number (case: XI)
+prev_num = numdict[char]                # update the previous number to the current number for the next iteration on the string
+sum += prev_num                         # add the previous number to the total sum
 
     return sum
 
