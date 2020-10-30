@@ -5,7 +5,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+<<<<<<< HEAD
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Twisted Trial" />
   </component>
+=======
+>>>>>>> 32d61f4f93a480e5e640c14d8285603c4eae8fe6
 </module>
