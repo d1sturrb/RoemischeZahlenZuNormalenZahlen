@@ -9,7 +9,7 @@ numdict = {
         "M" : 1000
 }
 
-# save input of user as sting
+# save input of user as string
 romNum = str
 romNum = str(input("Römische nummer eingeben: "))
 
