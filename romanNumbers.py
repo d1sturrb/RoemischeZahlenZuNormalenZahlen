@@ -10,7 +10,6 @@ numdict = {
 }
 
 # save input of user as string
-romNum = str
 romNum = str(input("Römische nummer eingeben: "))
 
 #translate the roman number to decimal
