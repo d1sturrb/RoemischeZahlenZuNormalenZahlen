@@ -13,20 +13,21 @@ def getValueAt(text, index):
     return roemische_zahlen[text[index]]
 
 
+    # Erstellt eine Liste und fügt die dezimalen Werte der der römischen Zeichen an der jeweiligen Stelle ein
 def romanTextToValues(text):
     werteliste = []
     for i in range(len(text)):
         werteliste.append(getValueAt(text, i))
     return werteliste
     
-
+    # Findet die "negativen" Werte in der gegebenen Liste, damit ein "IX" auch korrekt erkannt wird.
 def setNegativeValues(werteliste):
     for i in range(len(werteliste)-1):
         if werteliste[i] < werteliste[i + 1]:
             werteliste[i] = -werteliste[i]
     return werteliste
 
-
+    # Berechnet den Wert der gegebenen römischen Zahl und wandelt sie in eine Dezimalzahl um.
 def calculateRomanValue(text):
     werteliste = romanTextToValues(text)
     werteliste = setNegativeValues(werteliste)

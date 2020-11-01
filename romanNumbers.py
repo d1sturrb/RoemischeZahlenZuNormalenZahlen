@@ -21,8 +21,8 @@ def translate(romNum):
             sum -= prev_num             # subtract from total sum
         else:
             sum += prev_num             # else: add to the previous number (case: XI)
-prev_num = numdict[char]                # update the previous number to the current number for the next iteration on the string
-sum += prev_num                         # add the previous number to the total sum
+        prev_num = numdict[char]        # update the previous number to the current number for the next iteration on the string
+    sum += prev_num                     # add the last roman number to the sum (for loop stops at last roman number, therefor this step is needed)
 
     return sum
 
